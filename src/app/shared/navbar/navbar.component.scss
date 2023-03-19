@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #5cd85ab7;
+    width: 100%;
+    z-index: 20;
+}
+
+.navbar-brand img {
+    width: 33px;
+}
+
+.navbar .nav-link {
+    color: white;
+    font-family: monospace;
+}
+
+.navbar .nav-link:hover {
+    color: #2f3c4f;
+}
+
+.navbar .navbar-center {
+    //justify-content: flex-end;
+}
+
+
+.profile-menu {
+    justify-content: flex-end !important;
+}
+
+
