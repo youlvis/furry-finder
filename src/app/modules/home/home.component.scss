@@ -1,7 +1,62 @@
-.container-fluid{
-    
+.home-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    grid-template-areas: 'divHomeIzq image-dogs'
+        'slide-home slide-home';
+    padding: 80px;
 }
 
-.bodyHome {
-    padding: 60px;
+.divHomeIzq {
+    grid-area: divHomeIzq;
+    display: grid;
+    grid-template-areas: 'text-home text-home'
+        'button-home button-home';
+    font-family: 'Open Sans';
+    font-size: 24px;
+}
+
+.text-home {
+    grid-area: text-home;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+}
+
+.button-home {
+    grid-area: button-home;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        margin: 0 10px;
+        width: 25%;
+        height: 90%;
+        border-radius: 10px;
+    }
+}
+
+.image-dogs {
+    grid-area: image-dogs;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    img {
+        border-radius: 15px;
+        width: 650px;
+        min-width: 350px;
+    }
+}
+
+.slide-home {
+    grid-area: slide-home;
+    height: 100%;
 }
