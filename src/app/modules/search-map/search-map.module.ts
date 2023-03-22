@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SearchMapComponent } from './search-map.component';
 import { RouterModule, Routes } from '@angular/router';
-import { ProfileComponent } from './profile.component';
 
-const routes: Routes = [{ path: '', component: ProfileComponent }]
+const routes: Routes = [{ path: '', component: SearchMapComponent }]
 
 @NgModule({
-  declarations: [ProfileComponent],
+  declarations: [SearchMapComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
   ]
 })
-export class ProfileModule { }
+export class SearchMapModule { }

@@ -1,0 +1,46 @@
+.container-found {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    grid-template-areas: 'title'
+        'form-content';
+    padding: 80px;
+}
+
+.title {
+    grid-area: title;
+    text-align: center;
+
+    h1 {
+        font-size: 40px;
+
+    }
+}
+
+.form-content {
+    grid-area: form-content;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    grid-template-areas: 'image-upload'
+        'container-input';
+}
+
+.image-upload {
+    grid-area: image-upload;
+}
+
+.container-input {
+    grid-area: container-input;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 60px;
+
+    .div-input {
+        width: 50%;
+    }
+
+}

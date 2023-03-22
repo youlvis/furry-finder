@@ -18,4 +18,9 @@ export class NavbarComponent implements OnInit {
     // e.name = e.name === 'menu' ? 'close' : 'menu'
     this.navLinks?.classList.toggle('top-[9%]')
   }
+
+
+  closeNav() {
+    document.querySelector('.nav-links').classList.remove('top-[9%]');
+  }
 }

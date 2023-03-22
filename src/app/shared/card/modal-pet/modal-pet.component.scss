@@ -1,7 +1,7 @@
 mat-dialog-content {
     height: 100%;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
     justify-content: center;
     grid-template-areas: 'modal-title modal-title'
         'modal-text modal-img'
@@ -54,12 +54,12 @@ mat-dialog-content {
 .modal-detail ul li strong {
     font-family: "Space Mono", Arial, serif;
     color: #4d4d4ddb;
-    width: 100px;
+    width: 73px;
 }
 
 .modal-detail ul li span {
     display: block;
-    width: 345px;
+    width: 290px;
 }
 
 @media screen and (max-width:900px) {

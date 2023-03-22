@@ -2,25 +2,26 @@
     <div>
         <img class="w-12 cursor-pointer" src="assets/images/huella.svg" alt="...">
     </div>
-    <div
-        class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+    <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%]
+         md:w-auto  w-full flex items-center px-5 z-50">
         <ul class="bg-white flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
             <li>
-                <a class="hover:text-gray-500" routerLink="/home">HOME</a>
+                <a (click)="closeNav()" class="hover:text-gray-500" routerLink="/home">HOME</a>
             </li>
             <li>
-                <a class="hover:text-gray-500" routerLink="/perfil">BUSCAR</a>
+                <a (click)="closeNav()" class="hover:text-gray-500" routerLink="/pet-search">BUSCAR</a>
             </li>
             <li>
-                <a class="hover:text-gray-500" routerLink="/home">ENCONTRÉ</a>
+                <a (click)="closeNav()" class="hover:text-gray-500" routerLink="/found-pet">ENCONTRÉ</a>
             </li>
             <li>
-                <a class="hover:text-gray-500" routerLink="/home">BUSCAR EN EL MAPA</a>
+                <a (click)="closeNav()" class="hover:text-gray-500" routerLink="/search-map">BUSCAR EN EL MAPA</a>
             </li>
         </ul>
     </div>
     <div class="flex items-center gap-6">
-        <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</button>
+        <button routerLink="/login" class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign
+            in</button>
         <img class="text-3xl cursor-pointer md:hidden" (click)="onToggleMenu(this)" src="assets/images/menu.svg" alt="">
 
     </div>

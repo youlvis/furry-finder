@@ -1,0 +1,34 @@
+<div class="container-upload">
+    <div class="container">
+        <div class="wrapper" [ngClass]="{'active': file}">
+            <div class="image">
+                <img *ngIf="isVisible" class="img-upload" [src]="imageUrl" alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <img src="assets/images/dog.png" alt="">
+                </div>
+                <div class="text">
+                    <span>Sube la foto de la mascota</span>
+                </div>
+            </div>
+            <div id="cancel-btn" *ngIf="file">
+                <img (click)="cancelFile()" src="assets/images/close.svg" alt="">
+            </div>
+            <div class="file-name">
+                {{fileName}}
+            </div>
+        </div>
+        <ul>
+            <li>
+                <i>* asegurate que la foto tenga buena iluminación</i>
+            </li>
+            <li>
+                <i>* asegurate que solamente sea la mascota en la foto</i>
+            </li>
+        </ul>
+        <button id="custom-btn" (click)="chooseFile()">Cargar Imagen</button>
+        <input id="default-btn" type="file" accept="image/jpeg, image/png, image/bmp" hidden
+            (change)="onFileSelected($event)">
+    </div>
+</div>
