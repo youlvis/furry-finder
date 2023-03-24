@@ -5,7 +5,7 @@
     grid-template-areas: 'divHomeIzq image-dogs'
         'division division'
         'slide-home slide-home';
-    padding: 80px;
+    padding: 30px;
 }
 
 .divHomeIzq {
@@ -32,6 +32,11 @@
 
     .sign-up {
         text-decoration: underline;
+    }
+
+    span {
+        font-size: 28px;
+        font-weight: 200;
     }
 }
 
@@ -73,4 +78,93 @@
     border: 1px solid rgba(0, 0, 0, 0.285);
     margin-top: 40px;
     width: 100%;
+}
+
+@media screen and (max-width:1100px) {
+
+
+    .home-content {
+        padding: 20px;
+    }
+
+    .button-home button {
+        font-size: 1.2rem;
+        padding: 10px 10px;
+        margin-right: 10px;
+        background-color: #a6c1ee;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 30%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .container-home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .image-dogs {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .text-home {
+        text-align: center;
+    }
+
+    .text-home h1 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .text-home span {
+        display: block;
+        margin-top: 10px;
+        font-size: 0.8rem;
+    }
+
+    .button-home {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .button-home button {
+        font-size: 1.2rem;
+        padding: 10px 10px;
+        margin-right: 10px;
+        background-color: #a6c1ee;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 30%;
+        height: 100%;
+    }
+
+    .button-home button:hover {
+        background-color: #87acec;
+    }
+
+    .slide-home {
+        width: 100%;
+    }
+
 }

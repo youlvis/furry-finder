@@ -1,0 +1,23 @@
+/* Estilos para la página de registro */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+img {
+    max-width: 100%;
+}
+
+a:hover {
+    text-decoration: underline;
+}

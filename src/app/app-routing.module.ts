@@ -38,14 +38,18 @@ const routes: Routes = [
       import('./modules/search-map/search-map.module').then(m => m.SearchMapModule)
   },
   {
-    path: '**', loadChildren: () =>
-      import('./modules/home/home.module').then(m => m.HomeModule),
+    path: 'register', loadChildren: () =>
+      import('./modules/auth/register/register.module').then(m => m.RegisterModule),
 
+  },
+  {
+    path: '**', loadChildren: () =>
+      import('./modules/maintenance/maintenance.module').then(m => m.MaintenanceModule),
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

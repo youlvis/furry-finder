@@ -4,16 +4,22 @@
     justify-content: center;
     grid-template-areas: 'title'
         'form-content';
-    padding: 80px;
+    padding: 30px;
 }
 
 .title {
     grid-area: title;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 
     h1 {
-        font-size: 40px;
-
+        width: 50%;
+        text-align: center;
+        line-height: normal;
+        font-size: 28px;
+        text-align: center;
+        font-weight: 400;
+        margin: 0 0 16px;
     }
 }
 
@@ -41,6 +47,27 @@
 
     .div-input {
         width: 50%;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .title {
+        text-align: center;
+
+        h1 {
+            width: 100%;
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+    }
+
+    .div-input {
+        width: 100% !important;
+    }
+
+    .container-input {
+        margin-top: 10px;
     }
 
 }

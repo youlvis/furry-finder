@@ -2,20 +2,21 @@
     <div class="home-content">
         <div class="divHomeIzq">
             <div class="text-home">
-                <h1>
-                    Estamos aqui para ayudarte a ubicar tu peludo. <span>Puedes <a class="sign-up"
-                            href="/login">craearte una
+                <h1 class="text-4xl md:text-6xl lg:text-8xl">
+                    Estamos aquí para ayudarte a ubicar a tu peludo. <span>Puedes <a class="sign-up"
+                            routerLink="/register">craearte una
                             cuenta aquí</a>
                         y registrar a tu peludo.</span>
                 </h1>
             </div>
             <div class="button-home">
-                <button class="bg-[#a6c1ee] text-white px-5 py-2  hover:bg-[#87acec]">Encontre</button>
-                <button class="bg-[#a6c1ee] text-white px-5 py-2  hover:bg-[#87acec]">Buscar</button>
+                <button routerLink="/found-pet"
+                    class="bg-[#a6c1ee] text-white px-5 py-2  hover:bg-[#87acec]">Encontre</button>
+                <button routerLink="/pet-search"
+                    class="bg-[#a6c1ee] text-white px-5 py-2  hover:bg-[#87acec]">Buscar</button>
             </div>
         </div>
         <div class="image-dogs"><img src="assets/images/Dogs-and-humans.jpg" alt=""></div>
-        <hr class="division">
         <div class="slide-home">
             <app-recently-lost></app-recently-lost>
         </div>

@@ -1,1 +1,29 @@
-<p>pet-search works!</p>
+<div class="container-pet">
+    <div class="title">
+        <h1 class="text-4xl md:text-6xl lg:text-8xl">Sube una foto de tu peludo y dale buscar, te mostraremos los
+            resultados con mayor
+            coincidencia.
+            <!-- <span>Tambien puedes <a class="sign-up" href="/login">craearte una
+                    cuenta aquí</a>
+                y registrar a tu mascota, asi te podemos notificar de otras coincidencia</span> -->
+        </h1>
+    </div>
+
+    <div class="image-upload">
+        <app-upload-img></app-upload-img>
+    </div>
+
+    <div class="m-2 search-btn">
+        <button id="custom-btn">Buscar</button>
+    </div>
+
+    <div class="flex items-center my-6">
+        <hr class="border-0 border-t border-gray-300 flex-grow h-0">
+        <span class="px-4 font-medium text-gray-500 text-2xl">Aqui abajo aparecerá los resultados con mayor
+            coicidencia</span>
+        <hr class="border-0 border-t border-gray-300 flex-grow h-0">
+    </div>
+    <div *ngIf="true" class="result">
+        <app-card></app-card>
+    </div>
+</div>
