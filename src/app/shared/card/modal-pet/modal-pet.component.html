@@ -27,6 +27,8 @@
         <img src="assets/images/Dogs-and-humans.jpg" alt="pet">
     </div>
     <div class="button-modal">
-        <button class="bg-[#a6c1ee] text-white px-5 py-2  hover:bg-[#87acec]">Es mi mascota</button>
-        <button class="bg-[#a6c1ee] text-white px-5 py-2  hover:bg-[#87acec]">Cancelar</button>
+        <button routerLink="/no-found" (click)="closeModal()"
+            class="bg-[#a6c1ee] text-white px-5 py-2  hover:bg-[#87acec]">Es mi
+            mascota</button>
+        <button (click)="closeModal()" class="bg-[#a6c1ee] text-white px-5 py-2  hover:bg-[#87acec]">Cancelar</button>
     </div>
