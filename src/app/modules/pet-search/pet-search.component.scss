@@ -57,6 +57,20 @@
     background: linear-gradient(135deg, #3a8ffe 0%, #9658fe 100%);
 }
 
+.custom-spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+
 @media screen and (max-width:1100px) {}
 
 @media (max-width: 850px) {
@@ -121,4 +135,14 @@
         width: 100%;
         margin: 1rem 0;
     }
+}
+
+#custom-btn.disabled-btn {
+    background-color: #ccc;
+    cursor: default;
+}
+
+#custom-btn.enabled-btn {
+    background: linear-gradient(135deg, #3a8ffe 0%, #9658fe 100%);
+    cursor: pointer;
 }

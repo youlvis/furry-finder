@@ -5,6 +5,8 @@
         <span class="px-4 font-medium text-gray-500 text-2xl">ESTAS SON LAS MASCOTAS REPORTADAS RECIENTEMENTE</span>
         <hr class="border-0 border-t border-gray-300 flex-grow h-0">
     </div>
-    <app-card></app-card>
+    <div *ngIf="imagesPet" class="result">
+        <app-card [imagesPet]="imagesPet" [estado]="estado"></app-card>
+    </div>
     <div class="see-more"><a routerLink="/no-found">Ver mas...</a></div>
 </div>

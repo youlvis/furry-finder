@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalPetComponent } from './modal-pet.component';
+import { ModalDogComponent } from './modal-dog.component';
 
-describe('ModalPetComponent', () => {
-  let component: ModalPetComponent;
-  let fixture: ComponentFixture<ModalPetComponent>;
+describe('ModalDogComponent', () => {
+  let component: ModalDogComponent;
+  let fixture: ComponentFixture<ModalDogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalPetComponent ]
+      declarations: [ ModalDogComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ModalPetComponent);
+    fixture = TestBed.createComponent(ModalDogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

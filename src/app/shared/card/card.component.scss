@@ -4,12 +4,13 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-    padding: 0px 120px;
+    padding: 0px 40px;
 }
 
 .container .card {
-    width: 280px;
-    height: 285px;
+    position: relative;
+    width: auto;
+    height: 345px;
     cursor: pointer;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -26,9 +27,19 @@
 
 .container .card img {
     width: 280px;
-    height: 220px;
+    height: auto;
+    object-fit: cover;
 }
 
+.container .card .text-card {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgb(255 255 255 / 90%);
+    color: black;
+    box-sizing: border-box;
+
+}
 
 .container .card h4 {
     font-weight: 600;
@@ -67,7 +78,7 @@
         flex-direction: column;
         margin: 5px 0 !important;
         width: 100% !important;
-        height: 100% !important;
+        // height: 100% !important;
         background-color: #fff;
         border-radius: 10px;
         overflow: hidden;
@@ -88,18 +99,18 @@
     }
 
     .text-card {
-        padding: 10px;
+        padding: 0px;
         text-align: center;
     }
 
     .text-card h4 {
-        font-size: 20px;
+        font-size: 17px;
         font-weight: bold;
-        margin-bottom: 5px;
+        margin: 0px !important;
     }
 
     .text-card p {
-        font-size: 14px;
+        font-size: 5px;
         color: #555;
         margin-bottom: 0;
     }

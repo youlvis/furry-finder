@@ -1,0 +1,11 @@
+<div class="modal-overlay">
+    <div class="modal-container">
+        <span class="modal-close" (click)="closeModal()">&times;</span>
+        <h2 class="modal-title">{{ title }}</h2>
+        <div class="modal-content">
+            <img [src]="imageSrc" alt="Perro" class="modal-image">
+            <p>{{ description }}</p>
+        </div>
+        <button class="modal-button" mat-button (click)="closeModal()">Entendido</button>
+    </div>
+</div>

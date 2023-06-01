@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './core/guards/auth-guard.guard';
 
 const routes: Routes = [
   {
@@ -20,27 +21,34 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () =>
-      import('./modules/profile/profile.module').then(m => m.ProfileModule)
+      import('./modules/profile/profile.module').then(m => m.ProfileModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'pet-search',
     loadChildren: () =>
-      import('./modules/pet-search/pet-search.module').then(m => m.PetSearchModule)
+      import('./modules/pet-search/pet-search.module').then(m => m.PetSearchModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'found-pet',
     loadChildren: () =>
-      import('./modules/found-pet/found-pet.module').then(m => m.FoundPetModule)
+      import('./modules/found-pet/found-pet.module').then(m => m.FoundPetModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'search-map',
     loadChildren: () =>
-      import('./modules/search-map/search-map.module').then(m => m.SearchMapModule)
+      import('./modules/search-map/search-map.module').then(m => m.SearchMapModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'register', loadChildren: () =>
       import('./modules/auth/register/register.module').then(m => m.RegisterModule),
-
+  },
+  {
+    path: 'confirm-email', loadChildren: () =>
+      import('./modules/auth/confirm-email/confirm-email.module').then(m => m.ConfirmEmailModule),
   },
   {
     path: '**', loadChildren: () =>

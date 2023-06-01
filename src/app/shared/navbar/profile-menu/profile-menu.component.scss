@@ -1,31 +1,66 @@
-.profile-name {
-    text-align: center;
-}
-
-.dropdown-menu[data-bs-popper] {
-    left: -130px;
-}
-
-.profile-name img {
-    width: 35px;
-    right: 25px;
+.profile-menu {
     position: relative;
 }
 
-.profile-name span {
-    text-overflow: ellipsis;
+.profile-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
-.img-profile {
-    width: 45px;
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
 }
 
-.dropdown-toggle::after {
+.profile-icon:hover {
+    transform: scale(1.1);
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: none;
+    z-index: 10;
 }
 
-@media screen and (max-width: 991px) {
-    .dropdown-menu[data-bs-popper] {
-        left: -10px;
-    }
+.profile-options {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-options li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-options li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.profile-options li a i {
+    margin-right: 10px;
+}
+
+.profile-options li a span {
+    font-size: 14px;
+}
+
+.profile-menu .profile-dropdown.open {
+    display: block;
 }

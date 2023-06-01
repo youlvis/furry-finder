@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-upload-img',
@@ -10,11 +10,11 @@ export class UploadImgComponent implements OnInit {
   file: File;
   imageUrl: string;
   fileName: string;
+  @Output() imageSelected = new EventEmitter<File>();
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   chooseFile() {
     document.getElementById('default-btn').click();
@@ -23,11 +23,12 @@ export class UploadImgComponent implements OnInit {
   onFileSelected(event) {
     const imgElement = document.querySelector('.img-upload') as HTMLImageElement;
     const file: File = event.target.files[0];
-    if (file) {
+    if (file && file != null) {
       const reader = new FileReader();
       reader.onload = () => {
         this.imageUrl = reader.result.toString();
         this.file = file;
+        this.imageSelected.emit(file);
       };
       reader.readAsDataURL(file);
       this.fileName = file.name;
@@ -40,6 +41,6 @@ export class UploadImgComponent implements OnInit {
     this.file = null;
     this.fileName = '';
     this.isVisible = false;
+    this.imageSelected.emit(null);
   }
-
 }

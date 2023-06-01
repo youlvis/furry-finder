@@ -1,0 +1,16 @@
+<div class="modal-overlay">
+    <div class="modal-container">
+        <span class="modal-close" (click)="closeModal()">&times;</span>
+        <h2 class="modal-title">{{ data.title }}</h2>
+        <div class="modal-content">
+            <a [href]="data.imagen" target="_blank" class="modal-image-link">
+                <img [src]="data.imagen" alt="Mascota encontrada" class="modal-image">
+                <span class="modal-image-overlay">Haz clic para ampliar</span>
+            </a>
+            <p><strong>Ubicación:</strong> {{ data.ubicacion }}</p>
+            <p><strong>Fecha:</strong> {{ data.fecha | date:'dd/MM/yyyy HH:mm' }}</p>
+            <p><strong>Nota:</strong> {{ data.nota }}</p>
+        </div>
+        <button class="modal-button" mat-button (click)="esMiMascota()">Es mi mascota</button>
+    </div>
+</div>

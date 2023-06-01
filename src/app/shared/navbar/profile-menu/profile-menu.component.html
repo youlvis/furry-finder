@@ -1,19 +1,29 @@
-<li class="nav-item dropdown d-flex">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-        aria-expanded="false">
-        <img class="img-profile" src="../../../assets/images/huella.svg" alt="">
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li class="profile-name"><img src="../../../assets/images/huella.svg" alt=""><span>Lucy</span>
-        </li>
-        <li>
-            <hr class="dropdown-divider">
-        </li>
-        <li><a class="dropdown-item" href="#">Configurar cuenta</a></li>
-        <li>
-            <hr class="dropdown-divider">
-        </li>
-        <li><a class="dropdown-item" href="#">Politica de privacidad</a></li>
-        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-    </ul>
-</li>
+<div class="navbar">
+    <div class="profile-menu">
+        <button class="profile-button" (click)="toggleMenu()">
+            <img src="assets/images/perfil.png" alt="Perfil" class="profile-icon">
+        </button>
+        <div class="profile-dropdown" [class.open]="isMenuOpen" id="profile-dropdown">
+            <ul class="profile-options">
+                <li>
+                    <a routerLink="/no-found">
+                        <i class="material-icons">person</i>
+                        <span>Perfil</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/no-found">
+                        <i class="material-icons">settings</i>
+                        <span>Configuración</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/login" (click)="logOut()">
+                        <i class="material-icons">logout</i>
+                        <span>Cerrar sesión</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

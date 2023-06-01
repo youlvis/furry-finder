@@ -1,29 +1,29 @@
 <div class="container-pet">
     <div class="title">
-        <h1 class="text-4xl md:text-6xl lg:text-8xl">Sube una foto de tu peludo y dale buscar, te mostraremos los
-            resultados con mayor
-            coincidencia.
-            <!-- <span>Tambien puedes <a class="sign-up" href="/login">craearte una
-                    cuenta aquí</a>
-                y registrar a tu mascota, asi te podemos notificar de otras coincidencia</span> -->
-        </h1>
+        <h1 class="text-4xl md:text-6xl lg:text-8xl">Sube una foto del perrito y dale buscar, te mostraremos los
+            resultados con mayor coincidencia.</h1>
     </div>
 
-    <div class="image-upload">
-        <app-upload-img></app-upload-img>
-    </div>
+    <app-upload-img (imageSelected)="onImageSelected($event)"></app-upload-img>
 
     <div class="m-2 search-btn">
-        <button id="custom-btn">Buscar</button>
+        <button (click)="searchPetlost()" id="custom-btn" [disabled]="isButtonDisabled" [ngClass]="{
+            'disabled:opacity-50 cursor-not-allowed': isButtonDisabled,
+            'enabled:bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600': !isButtonDisabled
+          }" style="cursor: pointer;">Buscar</button>
     </div>
 
     <div class="flex items-center my-6">
         <hr class="border-0 border-t border-gray-300 flex-grow h-0">
-        <span class="px-4 font-medium text-gray-500 text-2xl">Aqui abajo aparecerá los resultados con mayor
-            coicidencia</span>
+        <span class="px-4 font-medium text-gray-500 text-2xl">Aquí abajo aparecerán los resultados con mayor
+            coincidencia</span>
         <hr class="border-0 border-t border-gray-300 flex-grow h-0">
     </div>
-    <div *ngIf="true" class="result">
-        <app-card></app-card>
+    <div *ngIf="imagesPet" class="result">
+        <app-card [imagesPet]="imagesPet"></app-card>
     </div>
+</div>
+
+<div class="custom-spinner-overlay" *ngIf="isLoading">
+    <mat-spinner color="primary"></mat-spinner>
 </div>
