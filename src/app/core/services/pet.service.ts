@@ -19,13 +19,13 @@ export class PetService {
       'Authorization': `Bearer ${this.sessionStorageService.getToken()}`
     });
 
-    return this.http.post('http://localhost:3002/pet/getPetLost', formData, { headers });
+    return this.http.post('http://pupfinder.us-east-1.elasticbeanstalk.com/pet/getPetLost', formData, { headers });
   }
 
 
   recentlyReported(): Observable<any> {
     const data = ['pepe001', 'loki001', 'kuki001', 'love001', 'oddy001', 'maguie001'];
-    return this.http.post('http://localhost:3002/pet/recentlyReported', data);
+    return this.http.post('http://pupfinder.us-east-1.elasticbeanstalk.com/pet/recentlyReported', data);
   }
 
 

@@ -16,7 +16,7 @@ export class AuthService {
   ) { }
 
   login(data: any): Observable<any> {
-    return this.http.post('http://localhost:3002/user/login', data).pipe(
+    return this.http.post('http://pupfinder.us-east-1.elasticbeanstalk.com/user/login', data).pipe(
       tap((response: any) => {
         this.sessionStorageService.saveToken(response.AccessToken);
         this.sessionStorageService.saveExpiration(response.ExpiresIn);
@@ -26,18 +26,18 @@ export class AuthService {
   }
 
   register(data: any): Observable<any> {
-    return this.http.post('http://localhost:3002/user/singUp', data)
+    return this.http.post('http://pupfinder.us-east-1.elasticbeanstalk.com/user/singUp', data)
   }
 
   confirmEmail(data: any): Observable<any> {
-    return this.http.post('http://localhost:3002/user/confirmSingUp', data)
+    return this.http.post('http://pupfinder.us-east-1.elasticbeanstalk.com/user/confirmSingUp', data)
   }
 
   logOut(): Observable<any> {
     const data = this.sessionStorageService.getToken();
     this.sessionStorageService.clearSessionStorage();
     console.log(data)
-    return this.http.post('http://localhost:3002/user/logOutUser', data)
+    return this.http.post('http://pupfinder.us-east-1.elasticbeanstalk.com/user/logOutUser', data)
   }
 
   isLoggedIn(): Observable<boolean> {
